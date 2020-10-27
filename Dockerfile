@@ -7,6 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 ADD ./package.json /app/package.json
 WORKDIR /app
+
 RUN npm i
 CMD node index.js
 ADD ./ /app
