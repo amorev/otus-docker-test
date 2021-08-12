@@ -14,7 +14,7 @@ console.log({dbUser, dbPassword})
 // Креды - Creds - Credentials - Данные для доступа куда либо - авторизационные данные
 //
 app.get('/', (req, res) => {
-  res.send('Bye Bye World!')
+  res.send('Bye Bye Bye Bye World!')
 })
 
 app.listen(port, () => {

@@ -6,7 +6,9 @@ RUN apt-get update && \
     apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-ADD / /app
+ADD /package.json /app/
+ADD /package-lock.json /app/
 RUN npm i
+ADD / /app
 EXPOSE 3000
 CMD node index.js
