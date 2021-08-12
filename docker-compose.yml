@@ -10,6 +10,15 @@ services:
     networks:
       - reverse-proxy
 
+  service2:
+    build: .
+    expose:
+      - 3000
+    environment:
+      - VIRTUAL_HOST=test2.s3.obvu.ru
+      - VIRTUAL_PORT=3000
+    networks:
+      - reverse-proxy
 networks:
   reverse-proxy:
     external:
