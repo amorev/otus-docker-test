@@ -1,4 +1,6 @@
 require('dotenv').config()
+const config = require('./config')
+console.log(config)
 const express = require('express')
 const app = express()
 const port = process.env.PORT
